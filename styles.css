@@ -1,12 +1,12 @@
 :root {
   color-scheme: dark;
-  --bg: #171b20;
-  --paper: #20262c;
-  --line: #3a424a;
-  --text: #e7e6e0;
-  --muted: #aab0b3;
-  --accent: #b9aa8a;
-  --accent-ink: #171b20;
+  --bg: #111418;
+  --paper: #1a1f24;
+  --line: #343b43;
+  --text: #e1e0da;
+  --muted: #9da5a9;
+  --accent: #aaa187;
+  --accent-ink: #111418;
 }
 
 * { box-sizing: border-box; }
@@ -39,7 +39,7 @@ a { color: inherit; }
 h1 {
   margin: 0;
   color: var(--text);
-  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  font-size: clamp(1.1rem, 3.2vw, 1.4rem);
   line-height: 1.25;
   letter-spacing: -0.025em;
   font-weight: 600;
@@ -70,7 +70,7 @@ h1 {
 .destinations a:hover { color: var(--accent); }
 
 a:focus-visible {
-  outline: 3px solid #f5d67e;
+  outline: 3px solid #d2c49e;
   outline-offset: 4px;
 }
 
