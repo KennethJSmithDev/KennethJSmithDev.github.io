@@ -25,126 +25,49 @@ body {
 a { color: inherit; }
 
 .shell {
-  width: min(100% - 3rem, 60rem);
+  width: min(100% - 2.5rem, 34rem);
   min-height: 100svh;
   margin: 0 auto;
-  padding: clamp(2.5rem, 7vw, 5rem) 0 1.75rem;
+  padding: 0 0 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
-.identity {
-  display: flex;
-  gap: 0.85rem;
-  align-items: center;
-  margin-bottom: clamp(3.25rem, 9vw, 6rem);
-}
-
-.monogram {
-  display: grid;
-  width: 2.7rem;
-  height: 2.7rem;
-  place-items: center;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  color: var(--text);
-  font: 700 0.72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
-  letter-spacing: -0.08em;
-}
-
-.name { margin: 0.1rem 0 0; font-size: 1rem; font-weight: 700; }
-
-.intro { max-width: 36rem; }
-
-.eyebrow {
-  margin: 0;
-  color: var(--muted);
-  font: 600 0.66rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
+.name { margin: 0 0 1.1rem; color: var(--accent); font-size: 1rem; font-weight: 700; }
 
 h1 {
   margin: 0;
-  font-size: clamp(2rem, 4.8vw, 3.35rem);
-  line-height: 1;
-  letter-spacing: -0.055em;
-  text-transform: uppercase;
-}
-
-.lede {
-  max-width: 31rem;
-  margin: 1.7rem 0 1.75rem;
-  color: var(--muted);
-  font-size: 1rem;
-}
-
-.primary-link {
-  display: inline-flex;
-  gap: 0.75rem;
-  align-items: center;
-  padding: 0.72rem 0.95rem;
-  border: 1px solid var(--accent);
-  border-radius: 99rem;
-  background: transparent;
   color: var(--text);
-  font-size: 0.73rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-decoration: none;
-  text-transform: uppercase;
+  font-size: clamp(1.25rem, 4vw, 1.7rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  font-weight: 600;
 }
-
-.primary-link:hover { background: #2b302f; color: #f1eee4; }
 
 .destinations {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0;
-  margin-top: clamp(3.5rem, 8vw, 6rem);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  gap: 0.65rem;
+  margin-top: 2rem;
 }
 
 .destinations a {
-  position: relative;
-  min-height: 6.5rem;
-  padding: 1rem 1.4rem 1rem 0;
-  border-right: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3.4rem;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.3rem;
+  background: var(--paper);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-decoration: none;
   transition: color 160ms ease;
 }
 
-.destinations a:first-child { padding-left: 0; }
-.destinations a:last-child { border-right: 0; }
 .destinations a:hover { color: var(--accent); }
-
-.card-label {
-  display: block;
-  max-width: 7rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-
-.card-arrow {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 1rem;
-  color: var(--accent);
-  font-size: 1rem;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  margin-top: auto;
-  padding-top: 4rem;
-  color: var(--muted);
-  font: 0.65rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
 
 a:focus-visible {
   outline: 3px solid #f5d67e;
@@ -152,17 +75,9 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .destinations a, .primary-link { transition: none; }
+  .destinations a { transition: none; }
 }
 
 @media (max-width: 600px) {
-  .shell { width: min(100% - 2rem, 60rem); padding-top: 2rem; }
-  .identity { margin-bottom: 4rem; }
-  h1 { font-size: clamp(2rem, 10.5vw, 3.35rem); }
-  .destinations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .destinations a { border-right: 0; border-bottom: 1px solid var(--line); }
-  .destinations a:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
-  .destinations a:nth-child(even) { padding-left: 1rem; }
-  .destinations a:nth-last-child(-n + 2) { border-bottom: 0; }
-  footer { flex-wrap: wrap; padding-top: 3rem; }
+  .shell { width: min(100% - 2rem, 34rem); }
 }
