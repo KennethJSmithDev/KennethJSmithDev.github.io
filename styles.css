@@ -1,12 +1,12 @@
 :root {
-  color-scheme: light;
-  --bg: #f4f1eb;
-  --paper: #fbfaf7;
-  --line: #d7d1c7;
-  --text: #17222d;
-  --muted: #59636b;
-  --accent: #e06438;
-  --accent-ink: #fffaf5;
+  color-scheme: dark;
+  --bg: #171b20;
+  --paper: #20262c;
+  --line: #3a424a;
+  --text: #e7e6e0;
+  --muted: #aab0b3;
+  --accent: #b9aa8a;
+  --accent-ink: #171b20;
 }
 
 * { box-sizing: border-box; }
@@ -45,7 +45,7 @@ a { color: inherit; }
   width: 2.7rem;
   height: 2.7rem;
   place-items: center;
-  border: 1px solid var(--text);
+  border: 1px solid var(--accent);
   border-radius: 50%;
   color: var(--text);
   font: 700 0.72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
@@ -66,9 +66,9 @@ a { color: inherit; }
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  line-height: 0.97;
-  letter-spacing: -0.07em;
+  font-size: clamp(2rem, 4.8vw, 3.35rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
   text-transform: uppercase;
 }
 
@@ -83,11 +83,11 @@ h1 {
   display: inline-flex;
   gap: 0.75rem;
   align-items: center;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--text);
+  padding: 0.72rem 0.95rem;
+  border: 1px solid var(--accent);
   border-radius: 99rem;
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: transparent;
+  color: var(--text);
   font-size: 0.73rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -95,7 +95,7 @@ h1 {
   text-transform: uppercase;
 }
 
-.primary-link:hover { background: #c95029; }
+.primary-link:hover { background: #2b302f; color: #f1eee4; }
 
 .destinations {
   display: grid;
@@ -158,7 +158,7 @@ a:focus-visible {
 @media (max-width: 600px) {
   .shell { width: min(100% - 2rem, 60rem); padding-top: 2rem; }
   .identity { margin-bottom: 4rem; }
-  h1 { font-size: clamp(2.35rem, 13vw, 4.5rem); }
+  h1 { font-size: clamp(2rem, 10.5vw, 3.35rem); }
   .destinations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .destinations a { border-right: 0; border-bottom: 1px solid var(--line); }
   .destinations a:nth-child(odd) { border-right: 1px solid var(--line); padding-left: 0; }
